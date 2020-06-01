@@ -1,6 +1,6 @@
 # LAB - Class 6
 
-## Project: lab-06
+## Project: lab-07
 
 ### Author: Alaa almasri
 
@@ -63,6 +63,6 @@ i.e.
 - Describe any tests that you did not complete, skipped, etc
 
 #### UML
-![shift](assets/uml.png)
+![shift](assets/uml2.jpg)
 
 
