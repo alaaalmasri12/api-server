@@ -1,4 +1,4 @@
-# LAB - Class 6
+# LAB - Class 7
 
 ## Project: lab-07
 
@@ -6,7 +6,7 @@
 
 ### Links and Resources
 
-- [submission PR](https://github.com/alaaalmasri12/notes-v-2.0/pull/2)
+- [submission PR](https://github.com/alaaalmasri12/api-server/pull/2)
 - [ci/cd](https://github.com/alaaalmasri12/notes-v-2.0/actions/runs/117805220) (GitHub Actions)
 -[swager](https://app.swaggerhub.com/apis/alaaalmasri12/lab-06-api/0.1)
 ### Documentaion
