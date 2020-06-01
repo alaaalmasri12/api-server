@@ -1,26 +1,4 @@
 {
-  "categories": [
-    {
-      "name": "test",
-      "diplay_name": "test2",
-      "desciption": "tdsjadlkajskd",
-      "_id": 1
-    }
-  ],
-  "products": [
-    {
-      "catagory": "winter-clothes",
-      "name": "santa-jacket",
-      "display_name": "santa-rainy-jacket",
-      "description": "warmth jacket for price of 99",
-      "_id": 1
-    },
-    {
-      "catagory": "test",
-      "name": "test",
-      "diplay_name": "test2",
-      "desciption": "tdsjadlkajskd",
-      "_id": 2
-    }
-  ]
+  "categories": [],
+  "products": []
 }
