@@ -1,6 +1,6 @@
-# LAB - Class 7
+# LAB - Class 8
 
-## Project: lab-07
+## Project: lab-08
 
 ### Author: Alaa almasri
 
@@ -47,22 +47,26 @@
 
 i.e.
 
-- `PORT` - Port Number
-- `MONGODB_URI` - URL to the running mongo instance/db
+- `PORT` - 4000
+- `MONGODB_URI` - MONGODB_URI = 'mongodb://localhost:27017/lab-08-db';
 
 #### How to initialize/run your application (where applicable)
 
-- e.g. `node index.js`
+- e.g. `nodemon`
 
 #### How to use your library (where applicable)
 
 #### Tests
 
 - How do you run tests?
+ npm run test 
 - Any tests of note?
+models.test.js 6 tests
+api-test.js  8 tests
 - Describe any tests that you did not complete, skipped, etc
+update test
 
 #### UML
-![shift](assets/uml2.jpg)
+![lab8](assets/uml.jpg)
 
 
