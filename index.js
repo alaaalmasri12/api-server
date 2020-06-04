@@ -1,13 +1,13 @@
 'use strict';
-require("dotenv").config();
+require('dotenv').config();
 const mongoose = require('mongoose');
 const PORT=process.env.PORT || 4000;
 const server = require('./lib/server');
 const mongooseOptions = {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
 };
 
 server.start(PORT);

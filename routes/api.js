@@ -3,9 +3,11 @@ const router = express.Router();
 const catagories = require('../lib/models/categories/categories.model');
 const products = require('../lib/models/products/products.model');
 function getModel(req, res, next) {
-  let model = req.params.model; 
+  let model = req.params.model;
   switch(model) {
   case 'products':
+    console.log('alaaaa');
+    console.log(model);
     req.model = products;
     next();
     return;
@@ -20,14 +22,15 @@ function getModel(req, res, next) {
 }
 router.param('model', getModel);
 
-router.get(':model', GetAllproducts);
-router.get(':model/:id',GetOneproduct);
-router.post(':model', Postproduct );
-router.put(':model/:id',updateproduct);
-router.delete(':model/:id',deleteproduct);
+router.get('/:model', GetAllproducts);
+router.get('/:model/:id',GetOneproduct);
+router.post('/:model', Postproduct );
+router.put('/:model/:id',updateproduct);
+router.delete('/:model/:id',deleteproduct);
 
 
 function  GetAllproducts(req, res, next) {
+  console.log('asdasdad',req.model);
   req.model.read()
     .then(result => {
       let count = result.length;
@@ -44,7 +47,6 @@ function GetOneproduct(req, res, next) {
 }
 
 function Postproduct(req, res, next) {
-  let id = req.params.id;
   req.model
     .create(req.body)
     .then(record => res.json(record))

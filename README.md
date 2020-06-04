@@ -1,6 +1,6 @@
-# LAB - Class 8
+# LAB - Class 9
 
-## Project: lab-08
+## Project: lab-09
 
 ### Author: Alaa almasri
 
@@ -62,11 +62,12 @@ i.e.
  npm run test 
 - Any tests of note?
 models.test.js 6 tests
-api-test.js  8 tests
+api-test.js  7 tests 
+total :13 test
 - Describe any tests that you did not complete, skipped, etc
 update test
 
 #### UML
-![lab8](assets/uml.jpg)
+![lab8](assets/lab9.jpg)
 
 

@@ -7,15 +7,20 @@ const mockRequest = supergoose(server);
 describe(' API test', ()=> {
 
   it('it can get() product ', ()=> {
-    let obj = {name: 'test-post-2', displayname:'test2',description:'asdad', categorie:'asdsa'};
+    let obj = {'name': 'test-post-2', 'displayname':'test2','description':'asdad', 'categorie':'asdsa'};
     return mockRequest
       .post('/api/v1/products')
       .send(obj)
       .then(data => {
         return mockRequest.get('/api/v1/products')
           .then(result => {
+
+            // console.log('result',result.body);
             Object.keys(obj).forEach(key=> {
-              expect(result.body[0][key]).toEqual(obj[key]);
+              console.log('testtttttttttt',result.body.result);
+
+              expect(result.body.result[0][key]).toEqual(obj[key]);
+              
             });
           });
       });
@@ -24,10 +29,13 @@ describe(' API test', ()=> {
   it('can post() a new catagory ', ()=> {
     let obj = {name: 'test-post-2', displayname:'test2',description:'asdad'};
     return mockRequest
-      .post('/api/v1/categories')
+      .post('/api/v1/catagories')
       .send(obj)
       .then(data => {
-        expect(data.status).toBe(201);
+        // compare what the post has returned with hwat we submitted
+        // console.log(data.body);
+        expect(data.status).toBe(200);
+        console.log('object',obj);
         Object.keys(obj).forEach(key => {
           expect(data.body[key]).toEqual(obj[key]);
         });
@@ -39,7 +47,7 @@ describe(' API test', ()=> {
       .post('/api/v1/products')
       .send(obj)
       .then(data => {
-        expect(data.status).toBe(201);
+        expect(data.status).toBe(200);
         Object.keys(obj).forEach(key => {
           expect(data.body[key]).toEqual(obj[key]);
         });
@@ -51,10 +59,10 @@ describe(' API test', ()=> {
     let obj = {name: 'test-post-2', displayname:'test2',description:'asdad'};
     let id='5ed66d3eade6f2275c886a86';
     return mockRequest
-      .post('/api/v1/categories')
+      .post('/api/v1/catagories')
       .send(obj)
       .then(data => {
-        return mockRequest.delete(`/api/v1/categories/${id}`)
+        return mockRequest.delete(`/api/v1/catagories/${id}`)
           .then(data => {
             expect(data.status).toBe(200);
 
@@ -63,15 +71,15 @@ describe(' API test', ()=> {
   });
   it('it can delete() product ', ()=> {
     let obj = {name: 'test-post-2', displayname:'test2',description:'asdad', categorie:'asdsa'};
-    let id='5ed66d3eade6f2275c886a86';
+    let id='5ed66da2ade6f2275c886a87';
     return mockRequest
       .post('/api/v1/products')
       .send(obj)
       .then(data => {
+        console.log('alaaaaaaaaaaaaaaaaaa',obj);
         return mockRequest.delete(`/api/v1/products/${id}`)
           .then(data => {
             expect(data.status).toBe(200);
-            
           });
       });
   });
