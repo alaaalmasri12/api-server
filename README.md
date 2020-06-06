@@ -33,11 +33,6 @@
 ## As a developer, I want to DELETE an existing record in a database, using the DELETE method with an ID parameter on a custom API fellowing command
 
 >http DELETE :3000/products/`<id>`
--
-
-
-
-
 
 
 
