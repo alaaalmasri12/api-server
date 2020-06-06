@@ -1,0 +1,39 @@
+{
+  "name": "api-server",
+  "version": "1.0.0",
+  "description": "## Project: lab-06",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "start": "node server.js",
+    "lint": "eslint '**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alaaalmasri12/api-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alaaalmasri12/api-server/issues"
+  },
+  "homepage": "https://github.com/alaaalmasri12/api-server#readme",
+  "dependencies": {
+    "@code-fellows/supergoose": "^1.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jest": "^26.0.1",
+    "json-server": "^0.16.1",
+    "mongoose": "^5.9.16",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "supergoose": "^0.2.6",
+    "supertest": "^4.0.2",
+    "uuid": "^8.1.0"
+  }
+}
